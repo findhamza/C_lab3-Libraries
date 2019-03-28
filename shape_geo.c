@@ -1,4 +1,6 @@
-private float factorial(float x)
+#include "shape_geo.h"
+
+float factorial(float x)
 {
 	if(x == 0)
 		return 1;
@@ -7,8 +9,8 @@ private float factorial(float x)
 
 void sphere(float radius, float *surface, float *volume)
 {
-	&surface = 4*(M_PI)*radius*raidus;
-	&volume = 4/(3*(M_PI)*raidus*radius*raidus);
+	*surface = 4*(M_PI)*radius*radius;
+	*volume = 4/(3*(M_PI)*radius*radius*radius);
 }
 
 float volCylinder(float radius, float height)
@@ -18,7 +20,7 @@ float volCylinder(float radius, float height)
 
 float sumFloats(float x[], int numFloats)
 {
-	for(int j=0; j < numFloat; j++)
+	for(int j=0; j < numFloats; j++)
 	{
 		int pt = j;
 		int k = j+1;
@@ -35,7 +37,7 @@ float sumFloats(float x[], int numFloats)
 	}
 
 	float sum;
-	for(int i=0; i < numFloat; i++)
+	for(int i=0; i < numFloats; i++)
 	{
 		sum += x[i];
 	}
@@ -43,16 +45,16 @@ float sumFloats(float x[], int numFloats)
 	return sum;
 }
 
-double sin(float angle)
+double sine(float angle)
 {
 	float radian = (angle/180)*(M_PI);
 	float sin;
 	int iteration=1;
 	int flip = 1;
 	while(fabs((factorial(iteration)/pow(radian,iteration))-
-		(factorial(iteration+2)/pow(raidan,iteration+2)))>.000001)
+		(factorial(iteration+2)/pow(radian,iteration+2)))>.000001)
 	{
-		float denominator = fractorial(iteration);
+		float denominator = factorial(iteration);
 		float numerator = pow(radian,iteration);
 		sin += flip*(numerator/denominator);
 		if(flip>0)
