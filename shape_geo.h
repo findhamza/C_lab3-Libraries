@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <math.h>
 
 void sphere(float radius, float *surface, float *volume);

@@ -9,8 +9,8 @@ float factorial(float x)
 
 void sphere(float radius, float *surface, float *volume)
 {
-	*surface = 4*(M_PI)*radius*radius;
-	*volume = 4/(3*(M_PI)*radius*radius*radius);
+	*surface = 4 * M_PI * pow(radius,2);
+	*volume = 4 / (3 * M_PI * pow(radius,3));
 }
 
 float volCylinder(float radius, float height)

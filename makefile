@@ -1,14 +1,18 @@
 CC = gcc
 LIB = ar rcs
-CFLAGS = -I. 
+CFLAGS = -L. -I. -lm 
 LFLAGS = -std=gnu59
-DEPS = shape_geo.h
-OBJ = shape_geo.o
+LDEPS = shape_geo.h
+LOBJ = shape_geo.o
 AOBJ = shape_geo.a
 
-%.o: %.c $(DEPS)
+OBJ = main.o
+
+%.o: %.c $(LDEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-shape_geo.a: $(OBJ)
+shape_geo.a: $(LOBJ)
 	$(LIB) $@ $^
 
+main: $(OBJ) shape_geo.a
+	$(CC) -o $@ $^ $(CFLAGS)
