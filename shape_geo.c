@@ -9,8 +9,14 @@ float factorial(float x)
 
 void sphere(float radius, float *surface, float *volume)
 {
-	*surface = 4 * M_PI * pow(radius,2);
-	*volume = 4 / (3 * M_PI * pow(radius,3));
+//	*surface =  M_PI * pow(radius,2) * 4;
+//	*volume = M_PI * pow(radius,3) * (4/3);
+	*surface = 4;
+	*surface *= (float)pow(radius,2);
+	*surface *= M_PI;
+	*volume = (4.0f/3.0f);
+	*volume *= (float)pow(radius,3);
+	*volume *= M_PI;
 }
 
 float volCylinder(float radius, float height)
@@ -36,9 +42,10 @@ float sumFloats(float x[], int numFloats)
 		x[pt] = temp;
 	}
 
-	float sum;
+	float sum=0;
 	for(int i=0; i < numFloats; i++)
 	{
+		printf("\nlib array [%d]: %f",numFloats,x[i]);
 		sum += x[i];
 	}
 
@@ -48,19 +55,17 @@ float sumFloats(float x[], int numFloats)
 double sine(float angle)
 {
 	float radian = (angle/180)*(M_PI);
-	float sin;
-	int iteration=1;
-	int flip = 1;
-	while(fabs((factorial(iteration)/pow(radian,iteration))-
-		(factorial(iteration+2)/pow(radian,iteration+2)))>.000001)
+	float sin=0;
+	float oldsin=100;
+	int i=0;
+
+	while(fabs(sin-oldsin)>.000001 || sin==0)
 	{
-		float denominator = factorial(iteration);
-		float numerator = pow(radian,iteration);
-		sin += flip*(numerator/denominator);
-		if(flip>0)
-			flip = -1;
-		else
-			flip = 1;
+		oldsin = sin;
+		sin += ( pow(-1,i) / factorial((2*i)+1) ) * pow(radian,(2*i)+1);
+		i++;
+		printf("\n%f",sin);
 	}
+
 	return sin;
 }
