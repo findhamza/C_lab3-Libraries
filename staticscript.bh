@@ -1,0 +1,5 @@
+gcc -c -Wall shape_geo.c
+
+ar rcs shape_geo.a shape_geo.o
+
+gcc -I. -o testmain main.c shape_geo.a -lm
