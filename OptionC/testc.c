@@ -8,14 +8,18 @@ void sinCmd();
 
 int main()
 {
-	printf("\nSURFACE AREA AND VOLUME OF SHPERE\n");
+	printf("\nSURFACE AREA AND VOLUME OF SHPERE________________________\n");
 	sphereCmd();
-	printf("\nVOLUME OF A CYLINDER\n");
+	printf("_________________________________________________________\n");
+	printf("\nVOLUME OF A CYLINDER_____________________________________\n");
 	cylnCmd();
-	printf("\nFLOATING POINT SUM\n");
+	printf("_________________________________________________________\n");
+	printf("\nFLOATING POINT SUM_______________________________________\n");
 	sumCmd();
-	printf("\nSINE OF AN ANGLE\n");
+	printf("_________________________________________________________\n");
+	printf("\nSINE OF AN ANGLE_________________________________________\n");
 	sinCmd();
+	printf("_________________________________________________________\n");
 
 	return 0;
 }
