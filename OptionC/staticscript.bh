@@ -1,0 +1,5 @@
+gcc -c -Wall staticlib.c
+
+ar rcs staticlib.a staticlib.o
+
+gcc -I. -o testc testc.c staticlib.a -lm

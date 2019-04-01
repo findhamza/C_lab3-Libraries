@@ -1,4 +1,4 @@
-#include "shape_geo.h"
+#include "staticlib.h"
 
 float factorial(float x)
 {
@@ -9,8 +9,6 @@ float factorial(float x)
 
 void sphere(float radius, float *surface, float *volume)
 {
-//	*surface =  M_PI * pow(radius,2) * 4;
-//	*volume = M_PI * pow(radius,3) * (4/3);
 	*surface = 4;
 	*surface *= (float)pow(radius,2);
 	*surface *= M_PI;
@@ -59,12 +57,11 @@ double sine(float angle)
 	float oldsin=100;
 	int i=0;
 
-	while(fabs(sin-oldsin)>.000001 || sin==0)
+	while(fabs(sin-oldsin)>.000001 || oldsin==100)
 	{
 		oldsin = sin;
 		sin += ( pow(-1,i) / factorial((2*i)+1) ) * pow(radian,(2*i)+1);
 		i++;
-		printf("\n%f",sin);
 	}
 
 	return sin;

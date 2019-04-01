@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <shape_geo.h>
+#include <staticlib.h>
 
 void sphereCmd();
 void cylnCmd();
@@ -8,10 +8,13 @@ void sinCmd();
 
 int main()
 {
-
+	printf("\nSURFACE AREA AND VOLUME OF SHPERE\n");
 	sphereCmd();
+	printf("\nVOLUME OF A CYLINDER\n");
 	cylnCmd();
+	printf("\nFLOATING POINT SUM\n");
 	sumCmd();
+	printf("\nSINE OF AN ANGLE\n");
 	sinCmd();
 
 	return 0;
@@ -39,7 +42,7 @@ void cylnCmd()
 	char unit[20];
 	printf("\nPlease enter radius of Cylinder: ");
 	scanf("%f%s",&radius,unit);
-	printf("\nPlease enter height of Cylinder: ");
+	printf("Please enter height of Cylinder: ");
 	scanf("%f%s",&height,unit);
 	float vol = volCylinder(radius,height);
 	printf("\nThe volume of the cylinder is: %f %s cubed\n\n",vol,unit);
@@ -52,13 +55,14 @@ void sumCmd()
 	int count=0;
 	printf("\nPlease enter array count: ");
 	scanf("%d",&count);
+	printf("\n");
 	float sumArr[count];
 	for(int i = 0; i < count; i++)
 	{
-		printf("\nPlease give next float: ");
+		printf("Please give next float: ");
 		scanf("%f",&sumArr[i]);
 	}
-	printf("\nThe sum of the float entered is: %f",sumFloats(sumArr,count));
+	printf("\nThe sum of the float entered is: %f\n\n",sumFloats(sumArr,count));
 
 	return;
 }
