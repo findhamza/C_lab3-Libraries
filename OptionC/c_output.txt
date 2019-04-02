@@ -1,0 +1,61 @@
+
+SURFACE AREA AND VOLUME OF SHPERE________________________
+
+Please enter radius of sphere: 17.583000cm
+The surface area of the sphere is: 3885.042969 cm squared
+The volume of the sphere is: 22770.238281 cm cubed
+
+_________________________________________________________
+
+VOLUME OF A CYLINDER_____________________________________
+
+Please enter radius of Cylinder: 13.350000feet
+Please enter height of Cylinder: 3.710000feet
+The volume of the cylinder is: 2077.238281 feet cubed
+
+_________________________________________________________
+
+FLOATING POINT SUM_______________________________________
+
+Please enter array count: 8
+Please give next float: 0.347679
+Please give next float: 100400.796875
+Please give next float: 0.000010
+Please give next float: 1.343567
+Please give next float: 78.345673
+Please give next float: 1678.567017
+Please give next float: 997999.625000
+Please give next float: 0.000001
+
+lib array [0]: 0.000001
+lib array [1]: 0.000010
+lib array [2]: 0.347679
+lib array [3]: 1.343567
+lib array [4]: 78.345673
+lib array [5]: 1678.567017
+lib array [6]: 100400.796875
+lib array [7]: 997999.625000
+The sum of the float entered is: 1100159.000000
+
+_________________________________________________________
+
+SINE OF AN ANGLE_________________________________________
+
+Please enter the angle for sin(angle): 45.000000
+The sine of 45.000000 is 0.707107
+
+_________________________________________________________
+
+SINE OF AN ANGLE_________________________________________
+
+Please enter the angle for sin(angle): 36.000000
+The sine of 36.000000 is 0.587785
+
+_________________________________________________________
+
+SINE OF AN ANGLE_________________________________________
+
+Please enter the angle for sin(angle): 0.345000
+The sine of 0.345000 is 0.006021
+
+_________________________________________________________

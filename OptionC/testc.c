@@ -20,6 +20,12 @@ int main()
 	printf("\nSINE OF AN ANGLE_________________________________________\n");
 	sinCmd();
 	printf("_________________________________________________________\n");
+	printf("\nSINE OF AN ANGLE_________________________________________\n");
+	sinCmd();
+	printf("_________________________________________________________\n");
+	printf("\nSINE OF AN ANGLE_________________________________________\n");
+	sinCmd();
+	printf("_________________________________________________________\n");
 
 	return 0;
 }
@@ -33,6 +39,7 @@ void sphereCmd()
 
 	printf("\nPlease enter radius of sphere: ");
 	scanf("%f%s",&radius,units);
+	printf("%f%s",radius,units);
 	sphere(radius, &surface, &volume);
 	printf("\nThe surface area of the sphere is: %f %s squared",surface,units);
 	printf("\nThe volume of the sphere is: %f %s cubed\n\n",volume,units);
@@ -46,8 +53,10 @@ void cylnCmd()
 	char unit[20];
 	printf("\nPlease enter radius of Cylinder: ");
 	scanf("%f%s",&radius,unit);
+	printf("%f%s\n",radius,unit);
 	printf("Please enter height of Cylinder: ");
 	scanf("%f%s",&height,unit);
+	printf("%f%s",height,unit);
 	float vol = volCylinder(radius,height);
 	printf("\nThe volume of the cylinder is: %f %s cubed\n\n",vol,unit);
 
@@ -59,12 +68,13 @@ void sumCmd()
 	int count=0;
 	printf("\nPlease enter array count: ");
 	scanf("%d",&count);
-	printf("\n");
+	printf("%d\n",count);
 	float sumArr[count];
 	for(int i = 0; i < count; i++)
 	{
 		printf("Please give next float: ");
 		scanf("%f",&sumArr[i]);
+		printf("%f\n",sumArr[i]);
 	}
 	printf("\nThe sum of the float entered is: %f\n\n",sumFloats(sumArr,count));
 
@@ -76,7 +86,7 @@ void sinCmd()
 	float angle;
 	printf("\nPlease enter the angle for sin(angle): ");
 	scanf("%f",&angle);
-	printf("\nThe sine of %f is %f\n\n",angle,sine(angle));
+	printf("%f\nThe sine of %f is %f\n\n",angle,angle,sine(angle));
 
 	return;
 }
