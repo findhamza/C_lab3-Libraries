@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-void sphere(float radius, float *surface, float *volume);
-float volCylinder(float radius, float height);
-float sumFloats(float x[], int numFloats);
-double sine(float angle);
+extern void sphere(float radius, float *surface, float *volume);
+extern float volCylinder(float radius, float height);
+extern float sumFloats(float x[], int numFloats);
+extern double sine(float angle);

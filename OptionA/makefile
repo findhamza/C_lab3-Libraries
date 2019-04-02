@@ -15,4 +15,4 @@ dynamiclib.so: $(LOBJ)
 	$(CC) $(LFLAGS) -o $@ $^ -lm
 
 testa: $(OBJ) dynamiclib.so
-	$(CC) -o $@ $^ $(CFLAGS)
+	$(CC) -o $@ $^ $(CFLAGS) -ldl
